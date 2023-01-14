@@ -5,7 +5,8 @@ const nextConfig = {
   env: {
     MAIL_USERNAME: "navwebdev2@gmail.com",
     MAIL_PASSWORD: "gzlduanoellhlssa",
-    BASE_URL: "http://localhost:3000",
+    // BASE_URL: "http://localhost:3000",
+    BASE_URL: "https://chakra-kriya-light.vercel.app",
   },
 };
 
