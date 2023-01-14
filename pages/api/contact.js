@@ -16,8 +16,8 @@ export default function handler(req, res) {
 
     var mailOptions = {
       from: "navwebdev2@gmail.com",
-      to: "navwebdev2@gmail.com",
-      subject: `New Form Submitted by ${name}`,
+      to: "support@chakrakriya.org",
+      subject: `New Form Submitted From Chakra Kriya by ${name}`,
       text: ` 
         Email:${email}
         Message:${message}
