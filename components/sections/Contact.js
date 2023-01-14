@@ -1,9 +1,94 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "/styles/Contact.module.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [errMessage, setErrMessage] = useState({
+    nameErr: "",
+    emailErr: "",
+    messageErr: "",
+  });
+
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+  const handleChange = (e) => {
+    setError(false);
+    setSuccess(false);
+    setErrMessage({
+      nameErr: "",
+      emailErr: "",
+      messageErr: "",
+    });
+    console.log(e.target.name, e.target.value);
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    setErrMessage({
+      nameErr: "",
+      emailErr: "",
+      messageErr: "",
+    });
+    setLoading(true);
+    e.preventDefault();
+
+    if (formData.name == "") {
+      setLoading(false);
+      return setErrMessage({ ...errMessage, nameErr: "NAME is Required" });
+    }
+    if (formData.email == "") {
+      setLoading(false);
+      return setErrMessage({ ...errMessage, emailErr: "EMAIL is Required" });
+    }
+    if (!validateEmail(formData.email)) {
+      setLoading(false);
+      return setErrMessage({ ...errMessage, emailErr: "Enter a valid EMAIL" });
+    }
+    if (formData.message == "") {
+      setLoading(false);
+      return setErrMessage({
+        ...errMessage,
+        messageErr: "Message is Required",
+      });
+    }
+
+    const res = await fetch(`${process.env.BASE_URL}/api/contact`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const dbData = await res.json();
+    console.log(dbData);
+    if (!dbData.err) {
+      setLoading(false);
+      setSuccess(true);
+      setLoading(false);
+    } else {
+      setLoading(false);
+      setError(true);
+      setLoading(false);
+    }
+  };
   return (
     <div className={styles.container} id="contact">
       <div className={styles.curve}>
@@ -32,52 +117,124 @@ const Contact = () => {
         </p>
       </div>
       <div className={styles.right}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+          {success && (
+            <div className={`${styles.floatingMessage} ${styles.success}`}>
+              Form Sent Successfully!
+            </div>
+          )}
+          {error && (
+            <div className={`${styles.floatingMessage} ${styles.error}`}>
+              Something Went Wrong
+            </div>
+          )}
           <div className={styles.inputGroup}>
-            <label className={styles.label} for="name">
-              NAME
-            </label>
+            {errMessage.nameErr !== "" ? (
+              <label
+                className={`${styles.label} ${styles.labelErr}`}
+                for="name"
+              >
+                {errMessage.nameErr}
+              </label>
+            ) : (
+              <label className={styles.label} for="name">
+                NAME
+              </label>
+            )}
             <div className={styles.inputWrapper}>
               <div className={styles.icon}>
                 <i class="bx bx-user"></i>
               </div>
-              <input className={styles.input} type={"name"} id="name" />
+              <input
+                className={styles.input}
+                type={"name"}
+                id="name"
+                name="name"
+                onChange={(e) => handleChange(e)}
+              />
             </div>
           </div>
           <div className={styles.inputGroup}>
-            <label className={styles.label} for="email">
-              EMAIL
-            </label>
+            {errMessage.emailErr !== "" ? (
+              <label
+                className={`${styles.label} ${styles.labelErr}`}
+                for="email"
+              >
+                {errMessage.emailErr}
+              </label>
+            ) : (
+              <label className={styles.label} for="email">
+                EMAIL
+              </label>
+            )}
             <div className={styles.inputWrapper}>
               <div className={styles.icon}>
                 <i class="bx bxl-gmail"></i>
               </div>
-              <input className={styles.input} type={"name"} id="email" />
+              <input
+                className={styles.input}
+                type={"name"}
+                id="email"
+                name="email"
+                onChange={(e) => handleChange(e)}
+              />
             </div>
           </div>
           <div className={styles.inputGroup}>
-            <label className={styles.label} for="subject">
-              SUBJECT
-            </label>
+            {errMessage.subjectErr !== "" ? (
+              <label
+                className={`${styles.label} ${styles.labelErr}`}
+                for="subject"
+              >
+                {errMessage.subjectErr}
+              </label>
+            ) : (
+              <label className={styles.label} for="subject">
+                SUBJECT
+              </label>
+            )}
             <div className={styles.inputWrapper}>
               <div className={styles.icon}>
                 <i class="bx bx-align-left"></i>
               </div>
-              <input className={styles.input} type={"name"} id="subject" />
+              <input
+                className={styles.input}
+                type={"name"}
+                id="subject"
+                name="subject"
+                onChange={(e) => handleChange(e)}
+              />
             </div>
           </div>
           <div className={styles.inputGroup}>
-            <label className={styles.label} for="name">
-              MESSAGE
-            </label>
+            {errMessage.messageErr !== "" ? (
+              <label
+                className={`${styles.label} ${styles.labelErr}`}
+                for="message"
+              >
+                {errMessage.messageErr}
+              </label>
+            ) : (
+              <label className={styles.label} for="message">
+                Message
+              </label>
+            )}
             <div className={styles.inputWrapper}>
               <textarea
                 className={`${styles.textarea} ${styles.input}`}
+                name="message"
+                onChange={(e) => handleChange(e)}
               ></textarea>
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button className={styles.button}>SEND</button>
+            {loading ? (
+              <button disabled className={styles.button}>
+                <i class="bx bx-loader-alt bx-spin"></i>
+              </button>
+            ) : (
+              <button className={styles.button}>SEND</button>
+            )}
           </div>
 
           <div className={styles.socialContainer}>

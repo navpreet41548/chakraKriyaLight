@@ -64,6 +64,7 @@
   position: relative;
   padding: 20px 15px;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.157);
+  position: relative;
 }
 
 .inputGroup {
@@ -103,6 +104,9 @@
 .label {
   font-size: 13px;
   color: var(--main-color1);
+}
+.labelErr {
+  color: rgb(255, 58, 58) !important;
 }
 
 .textarea {
@@ -161,6 +165,37 @@
   color: white;
   font-size: 2rem;
   padding: 10px 7px;
+}
+
+.floatingMessage {
+  position: absolute;
+  top: -4%;
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.226);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  animation: successMessageAnimation 0.2s ease;
+}
+
+.success {
+  color: #4bb543;
+}
+
+.error {
+  color: rgb(255, 58, 58);
+}
+
+@keyframes successMessageAnimation {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translateX(-50%);
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -236,6 +271,9 @@
   .background {
     display: none;
   }
+  .textarea {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -249,6 +287,11 @@
     font-size: 15px;
     margin-top: 20px;
     width: 50%;
+  }
+  .floatingMessage {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
   }
 }
 
