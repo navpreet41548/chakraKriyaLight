@@ -1,0 +1,272 @@
+.container {
+  width: 100vw;
+  min-height: 70vh;
+  position: relative;
+  background: var(--main-background-color);
+  padding: 50px 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curve {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0%;
+  left: 0;
+  transform: scaleY(0.7) translateY(-110%);
+}
+.curve path {
+  filter: drop-shadow(0px -10px 9px #a07eff20);
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid rgb(0, 0, 0);
+  filter: blur(4px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.heading {
+  font-family: var(--heading-font);
+  font-size: 4rem;
+  color: var(--font-color1);
+  font-weight: 400;
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+}
+
+.para {
+  font-size: 18px;
+  color: var(--font-color2);
+  font-weight: 300;
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+}
+.left {
+  margin-right: 10%;
+}
+
+.form {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 2;
+  position: relative;
+  padding: 20px 15px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.157);
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.082);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.icon {
+  width: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.icon i {
+  font-size: 20px;
+  color: var(--main-color1);
+}
+
+.input {
+  width: 95%;
+  padding: 15px 0;
+  outline: none;
+  border: 0;
+  color: rgb(90, 90, 90);
+  font-size: 15px;
+  font-family: var(--simple-font);
+  font-weight: 300;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--main-color1);
+}
+
+.textarea {
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: var(--main-color1);
+  color: white;
+  border: 1px solid var(--main-color1);
+  padding: 10px;
+  width: 150px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.059);
+  position: absolute;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+}
+
+.button:hover::after {
+  transform: translateX(0%);
+}
+
+.socialContainer {
+  position: absolute;
+  top: 20px;
+  right: 100%;
+  background-color: var(--main-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.socialIcon i {
+  color: white;
+  font-size: 2rem;
+  padding: 10px 7px;
+}
+
+@media screen and (max-width: 1400px) {
+  .form {
+    width: 440px;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .input {
+    padding: 10px 0;
+  }
+  .textarea {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    padding: 40px 4%;
+  }
+  .para {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    background: none;
+    box-shadow: none;
+    width: 100%;
+  }
+  .inputWrapper {
+    background-color: white;
+  }
+  .socialContainer {
+    display: none;
+  }
+  .buttonContainer {
+    justify-content: center;
+  }
+  .button {
+    background-color: var(--main-color1);
+    color: white;
+  }
+  .input {
+    padding: 15px 0;
+  }
+  .background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    padding: 0;
+  }
+  .icon {
+    width: 10%;
+  }
+  .button {
+    font-size: 15px;
+    margin-top: 20px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .para {
+    font-size: 11px;
+  }
+  .input {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+  .label {
+    font-size: 12px;
+  }
+  .icon i {
+    font-size: 15px;
+  }
+}

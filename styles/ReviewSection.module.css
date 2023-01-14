@@ -1,0 +1,246 @@
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(-main-background-color);
+}
+
+.curve {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0%;
+  left: 0;
+  /* transform: scaleY(0.5); */
+  transform: scaleY(0.3) translateY(-200%);
+  z-index: 1;
+  /* transform: scaleX(1.5) translateY(-75%); */
+}
+.curve path {
+  filter: drop-shadow(0px -10px 9px #a07eff20);
+}
+
+.rocket {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  right: 10%;
+  top: -30%;
+  animation: rocketAnimation 3s ease infinite;
+}
+
+@keyframes rocketAnimation {
+  0% {
+    transform: translateY(0%);
+  }
+  30% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.blobGroup {
+  position: absolute;
+  opacity: 0.06;
+  bottom: 0;
+  right: -2%;
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 800px;
+  background-color: white;
+  color: #595959;
+  position: relative;
+  padding: 30px 40px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.097);
+}
+
+.cardVisible {
+  animation: cardAnimation 0.5s ease forwards;
+}
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.cardImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.12);
+  position: absolute;
+  bottom: 90%;
+  right: 0;
+  background-color: white;
+}
+
+.heading {
+  position: absolute;
+  bottom: 100%;
+  right: 90px;
+  text-align: right;
+  color: var(--font-color1);
+  font-family: var(--heading-font);
+  font-size: 30px;
+  line-height: 25px;
+}
+
+.diff {
+  font-size: 18px;
+  font-family: var(--simple-font);
+  font-weight: 200;
+  color: var(--font-color2);
+}
+
+.quotes {
+  font-size: 7rem;
+  position: absolute;
+  top: 0;
+  transform: translate(-90%, -50%);
+  color: var(--main-color1);
+}
+
+.cardPara {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--main-color1);
+  border-radius: 50%;
+  margin: 5px;
+  /* cursor: pointer; */
+}
+
+.circleActive {
+  background-color: var(--main-color1);
+}
+
+@media screen and (max-width: 1400px) {
+  .card {
+    width: 60%;
+    padding: 25px 20px;
+  }
+  .cardPara {
+    font-size: 15px;
+  }
+  .heading {
+    bottom: 100%;
+    right: 70px;
+    line-height: 20px;
+    font-size: 25px;
+  }
+  .diff {
+    font-size: 15px;
+  }
+  .cardImage {
+    width: 60px;
+    height: 60px;
+  }
+  .quotes {
+    font-size: 4rem;
+  }
+  .curve {
+    transform: scaleY(0.5) translateY(-130%);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .card {
+    width: 80%;
+    padding: 20px 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 85%;
+    padding: 20px 15px;
+  }
+  .rocket {
+    width: 40px;
+  }
+  .quotes {
+    font-size: 3rem;
+    transform: translate(-60%, -60%);
+  }
+  .blobGroup {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    padding: 15px 15px;
+  }
+  .cardPara {
+    font-size: 13px;
+  }
+  .heading {
+    line-height: 20px;
+    font-size: 20px;
+  }
+  .diff {
+    font-size: 13px;
+  }
+  .quotes {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cardPara {
+    font-size: 12px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .cardImage {
+    height: 50px;
+    width: 50px;
+  }
+  .heading {
+    right: 55px;
+    font-size: 15px;
+    line-height: 13px;
+  }
+  .diff {
+    font-size: 12px;
+  }
+}
