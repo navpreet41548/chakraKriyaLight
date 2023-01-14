@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 export default function handler(req, res) {
-  const { name, email, message } = req.body;
+  const { name, email, message, subject } = req.body;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -20,6 +20,7 @@ export default function handler(req, res) {
       subject: `New Form Submitted From Chakra Kriya by ${name}`,
       text: ` 
         Email:${email}
+        Message:${subject}
         Message:${message}
          `,
     };
