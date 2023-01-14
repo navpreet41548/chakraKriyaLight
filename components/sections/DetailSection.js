@@ -38,7 +38,7 @@ const DetailSection = () => {
           alt="Group Photo Image"
           className={styles.groupPhoto}
         />
-        <img
+        <Image
           src={"/images/detail/masterClass.png"}
           width={400}
           height={500}
