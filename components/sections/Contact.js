@@ -41,13 +41,13 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     setErrMessage({
       nameErr: "",
       emailErr: "",
       messageErr: "",
     });
     setLoading(true);
-    e.preventDefault();
 
     if (formData.name == "") {
       setLoading(false);
@@ -117,7 +117,11 @@ const Contact = () => {
         </p>
       </div>
       <div className={styles.right}>
-        <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <form
+          className={styles.form}
+          onSubmit={(e) => handleSubmit(e)}
+          method="POST"
+        >
           {success && (
             <div className={`${styles.floatingMessage} ${styles.success}`}>
               Form Sent Successfully!
@@ -233,7 +237,9 @@ const Contact = () => {
                 <i class="bx bx-loader-alt bx-spin"></i>
               </button>
             ) : (
-              <button className={styles.button}>SEND</button>
+              <button className={styles.button} type="submit">
+                SEND
+              </button>
             )}
           </div>
 
