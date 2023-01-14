@@ -21,6 +21,7 @@ const DetailSection = () => {
           ></path>
         </svg>
       </div>
+      <h1 className={styles.mainHeading}>MASTER CLASS</h1>
 
       <div className={styles.imageWrapper}>
         <Image
@@ -37,7 +38,7 @@ const DetailSection = () => {
           alt="Group Photo Image"
           className={styles.groupPhoto}
         />
-        <Image
+        <img
           src={"/images/detail/masterClass.png"}
           width={400}
           height={500}

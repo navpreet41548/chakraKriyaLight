@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "/styles/HomeSection.module.css";
+import { useRouter } from "next/router";
 
 const HomeSection = () => {
+  const router = useRouter();
+  useEffect(() => {
+    const para1 = document.getElementsByClassName(styles.paraContainer)[0];
+    para1.addEventListener("click", () => {
+      console.log("CLicked");
+      window.location.href = "/#courses";
+    });
+  }, []);
+
   return (
     <div className={styles.container} id="home">
       <div className={styles.homeContent}>
@@ -91,15 +101,31 @@ const HomeSection = () => {
             ></motion.div>
           </div>
 
-          <motion.div
-            whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-            initial={{ opacity: 0, transform: "translateX(-50%) " }}
-            transition={{
-              duration: 0.3,
-              delay: 0,
-            }}
-            className={`${styles.line} ${styles.line1}`}
-          ></motion.div>
+          <div className={styles.paraContainer}>
+            <motion.p
+              whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+              initial={{ opacity: 0, transform: "translateX(-50%) " }}
+              transition={{
+                duration: 0.3,
+                delay: 0.3,
+              }}
+              className={`${styles.imagePara} ${styles.imagePara1}`}
+            >
+              BECOME A CERTIFIED
+            </motion.p>
+            <motion.p
+              whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+              initial={{ opacity: 0, transform: "translateX(-50%) " }}
+              transition={{
+                duration: 0.3,
+                delay: 0.6,
+              }}
+              className={`${styles.imagePara} ${styles.imagePara2}`}
+            >
+              CHAKRA KRIYA COACH
+            </motion.p>
+          </div>
+
           <motion.div
             whileInView={{ opacity: 1, transform: "translateX(0%) " }}
             initial={{ opacity: 0, transform: "translateX(-50%) " }}
@@ -109,6 +135,7 @@ const HomeSection = () => {
             }}
             className={`${styles.line} ${styles.line2}`}
           ></motion.div>
+
           <motion.div
             whileInView={{ opacity: 1, transform: "translateX(0%) " }}
             initial={{ opacity: 0, transform: "translateX(-50%) " }}

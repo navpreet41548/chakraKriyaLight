@@ -20,6 +20,14 @@
   filter: drop-shadow(0px -10px 9px #a07eff20);
 }
 
+.mainHeading {
+  position: absolute;
+  top: 0;
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+
 .imageWrapper {
   position: relative;
   width: 70%;
@@ -182,6 +190,9 @@
     top: 70%;
     bottom: unset;
   }
+  .mainHeading {
+    font-size: 27px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -199,6 +210,9 @@
   }
   .heading {
     margin-left: 30px;
+  }
+  .mainHeading {
+    font-size: 22px;
   }
 }
 

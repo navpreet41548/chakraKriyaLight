@@ -29,8 +29,8 @@ export default function Home() {
       <ReviewSection />
       <AboutMeSection />
       <CardSection />
-      <CourseSection />
       <DetailSection />
+      <CourseSection />
       <Contact />
       <Script src="/js/main.js"></Script>
     </Layout>

@@ -88,7 +88,7 @@ const CourseSection = () => {
         <SwiperSlide className={styles.cardd}>
           <CourseCard
             imageName="course2.webp"
-            heading="Become a Certified Chakra Kriya Mehod Coach"
+            heading="Become a Certified Chakra Kriya Coach"
             para="To succeed as a coach now, you need to have something that sets you apart. The Chakra Kriya method is designed to help you awaken your unique gifts using ancient principles and help you become a coach who gets a flood of clients."
           />
         </SwiperSlide>
