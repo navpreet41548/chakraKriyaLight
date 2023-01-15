@@ -32,6 +32,7 @@ export default function Home() {
       <DetailSection />
       <CourseSection />
       <Contact />
+
       <Script src="/js/main.js"></Script>
     </Layout>
   );

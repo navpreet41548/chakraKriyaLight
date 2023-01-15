@@ -15,7 +15,6 @@ const ReviewSection = () => {
         count = count + 1;
       }
       setIndex(count);
-      console.log(count);
     }, 5000);
     return () => clearInterval(interval);
   }, []);

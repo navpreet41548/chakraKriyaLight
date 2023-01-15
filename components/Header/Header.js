@@ -1,13 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./header.module.css";
 import { Squash as Hamburger } from "hamburger-react";
+import Form from "../elements/Form";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { updateForm } from "../../store/formSlice";
 
 const Header = () => {
+  const formState = useSelector((state) => state.formSlice);
+  const [isVisible, setIsVisible] = useState();
+  const [register, setRegister] = useState();
+  const dispatch = useDispatch();
+
   const menuRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-
   const NavLinks = [
     { display: "HOME", path: "/#home" },
     { display: "ABOUT", path: "/#about" },
@@ -21,13 +29,24 @@ const Header = () => {
     menuRef.current.classList.remove(`${styles.transformMenu}`);
   };
 
+  const handleClick = () => {
+    removeClass();
+    dispatch(updateForm({ register: false, visible: true }));
+  };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     menuRef.current.classList.toggle(`${styles.transformMenu}`);
   };
 
+  useEffect(() => {
+    setIsVisible(formState.form.visible);
+    setRegister(formState.form.register);
+  }, [formState]);
+
   return (
     <nav id="nav" className={styles.nav}>
+      {isVisible && <Form register={register} />}
       {isOpen && <div className={styles.overlay} onClick={removeClass}></div>}
       <div className={styles.left}>
         {/* <Image
@@ -53,12 +72,17 @@ const Header = () => {
             </Link>
           </li>
         ))}
-        <button className={`${styles.button} ${styles.buttonCenter}`}>
+        <button
+          className={`${styles.button} ${styles.buttonCenter}`}
+          onClick={handleClick}
+        >
           LOGIN
         </button>
       </ul>
       <div className={styles.right}>
-        <button className={styles.button}>LOGIN</button>
+        <button className={styles.button} onClick={handleClick}>
+          LOGIN
+        </button>
       </div>
       <div className={styles.burger} onClick={toggleMenu}>
         <Hamburger
