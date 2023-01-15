@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import nodemailer from "nodemailer";
 import User from "../../models/User";
 import dbConnect from "../../utils/dbConnect";
 import bcrypt from "bcryptjs";
@@ -33,6 +34,35 @@ export default async function handler(req, res) {
             path: "/",
           })
         );
+        // !Send Email
+        const transporter = nodemailer.createTransport({
+          service: "gmail",
+          host: "smtp.gmail.com",
+          port: 465,
+          secure: true,
+          auth: {
+            user: process.env.MAIL_USERNAME,
+            pass: process.env.MAIL_PASSWORD,
+          },
+        });
+
+        var mailOptions = {
+          from: "navwebdev2@gmail.com",
+          to: "support@chakrakriya.org",
+          subject: `New Registration Chakra Kriya by ${name}`,
+          text: ` 
+        Email:${email}
+
+        `,
+        };
+
+        transporter.sendMail(mailOptions, function (error, info) {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log("Email sent: " + info.response);
+          }
+        });
 
         //! Sending JSON response
         res.json({

@@ -46,6 +46,7 @@ const Form = ({ register, isOpen }) => {
 
   const handleRegisterSubmit = async () => {
     setError("");
+    setLoading(true);
     setSuccess("");
     setErrMessage({
       emailErr: "",
@@ -56,6 +57,7 @@ const Form = ({ register, isOpen }) => {
 
     if (re.test(formData.email)) {
       if (formData.password !== formData.cpassword) {
+        setLoading(false);
         return setErrMessage({
           ...errMessage,
           passwordErr: "Passwords Don't Match",
@@ -79,17 +81,25 @@ const Form = ({ register, isOpen }) => {
 
           if (dbData.err) {
             // setMessage(dbData.err);
+            setLoading(false);
+
             setError(dbData.err);
           } else {
+            setLoading(false);
+
             // dispatch(updateForm({ login: false, visible: false }));
             setSuccess("Registered Successfully");
           }
         } catch (err) {
+          setLoading(false);
+
           //   setMessage(err.message);
           setError("Something Went Wrong");
         }
       }
     } else {
+      setLoading(false);
+
       return setErrMessage({
         ...errMessage,
         emailErr: "Invalid Email",
@@ -98,6 +108,8 @@ const Form = ({ register, isOpen }) => {
   };
   const handleLoginSubmit = async () => {
     setError("");
+    setLoading(true);
+
     setSuccess("");
     setErrMessage({
       emailErr: "",
@@ -113,8 +125,11 @@ const Form = ({ register, isOpen }) => {
     });
     const dbData = await data.json();
     if (!dbData.err) {
+      setLoading(false);
       setSuccess("Logged In Successfully");
     } else {
+      setLoading(false);
+
       setError(dbData.err);
     }
   };
@@ -230,11 +245,11 @@ const Form = ({ register, isOpen }) => {
 
         {registerForm ? (
           <button className={styles.button} onClick={handleRegisterSubmit}>
-            REGISTER
+            {loading ? <i class="bx bx-loader-alt bx-spin"></i> : "REGISTER"}
           </button>
         ) : (
           <button className={styles.button} onClick={handleLoginSubmit}>
-            LOGIN
+            {loading ? <i class="bx bx-loader-alt bx-spin"></i> : "LOGIN"}
           </button>
         )}
 
