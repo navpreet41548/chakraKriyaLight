@@ -212,6 +212,7 @@ const Form = ({ register, isOpen }) => {
               className={styles.input}
               name="password"
               id="password"
+              type="password"
             />
           </div>
         </div>
@@ -238,6 +239,7 @@ const Form = ({ register, isOpen }) => {
                 className={styles.input}
                 name="cpassword"
                 id="cpassword"
+                type="password"
               />
             </div>
           </div>
