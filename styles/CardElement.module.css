@@ -105,6 +105,42 @@
   transform: translateX(0%);
 }
 
+@media screen and (max-width: 1700px) {
+  .card {
+    min-height: 350px;
+  }
+  .para {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1530px) {
+  .card {
+    min-height: 400px;
+  }
+  .button {
+    width: 75%;
+    font-size: 15px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .heading {
+    font-size: 25px;
+  }
+  .para {
+    font-size: 17px;
+  }
+  .card {
+    min-height: 340px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .para {
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 750px) {
   .card {
     min-height: 340px;
