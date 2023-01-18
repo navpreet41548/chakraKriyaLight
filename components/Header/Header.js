@@ -80,17 +80,22 @@ const Header = () => {
             </Link>
           </li>
         ))}
-        <button
+        <Link
+          href="/"
           className={`${styles.button} ${styles.buttonCenter}`}
-          onClick={handleClick}
+          // onClick={handleClick}
         >
           LOGIN
-        </button>
+        </Link>
       </ul>
       <div className={styles.right}>
-        <button className={styles.button} onClick={handleClick}>
+        <Link
+          href="/"
+          className={styles.button}
+          // onClick={handleClick}
+        >
           LOGIN
-        </button>
+        </Link>
       </div>
       <div className={styles.burger} onClick={toggleMenu}>
         <Hamburger
