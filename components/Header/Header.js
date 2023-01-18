@@ -81,7 +81,7 @@ const Header = () => {
           </li>
         ))}
         <Link
-          href="/"
+          href="https://academy.chakrakriya.org/login"
           className={`${styles.button} ${styles.buttonCenter}`}
           // onClick={handleClick}
         >
@@ -90,7 +90,7 @@ const Header = () => {
       </ul>
       <div className={styles.right}>
         <Link
-          href="/"
+          href="https://academy.chakrakriya.org/login"
           className={styles.button}
           // onClick={handleClick}
         >

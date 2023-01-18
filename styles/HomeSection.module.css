@@ -395,6 +395,7 @@
 
   .right {
     bottom: 14%;
+    display: none;
   }
   .homePoster {
     width: 50%;
@@ -408,6 +409,9 @@
   }
   .imagePara {
     font-size: 8px;
+  }
+  .homeContent {
+    margin-top: 0;
   }
 }
 

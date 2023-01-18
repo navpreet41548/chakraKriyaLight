@@ -26,6 +26,10 @@
   font-family: var(--heading-font);
   letter-spacing: 2px;
   font-size: 35px;
+  background: linear-gradient(to right, var(--main-color1), var(--main-color2));
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .imageWrapper {

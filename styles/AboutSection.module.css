@@ -67,6 +67,10 @@
   color: var(--font-color1);
   margin-top: 60px;
   letter-spacing: 4px;
+  background: linear-gradient(to right, var(--main-color1), var(--main-color2));
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subHeading {

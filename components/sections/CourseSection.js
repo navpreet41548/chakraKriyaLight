@@ -55,7 +55,7 @@ const CourseSection = () => {
           slideShadows: false,
         }}
         pagination={true}
-        autoplay={true}
+        // autoplay={true}
         modules={[EffectCoverflow, Pagination]}
         breakpoints={{
           300: {
@@ -95,13 +95,6 @@ const CourseSection = () => {
         </SwiperSlide>
         <SwiperSlide className={styles.cardd}>
           <CourseCard
-            imageName="course1.webp"
-            heading="Wealth (Third) Eye Secret Training"
-            para="Awaken your third eye and channel the divine energy of the universe to turn it into your wealth eye and attract abundance into your life effortlessly."
-          />
-        </SwiperSlide>
-        <SwiperSlide className={styles.cardd}>
-          <CourseCard
             imageName="course3.webp"
             heading="Become a Breathwork Coach"
             para="Help people overcome some of the most common health challenges faced today using the power of their own breath."
@@ -110,22 +103,29 @@ const CourseSection = () => {
         <SwiperSlide className={styles.cardd}>
           <CourseCard
             imageName="course4.webp"
-            heading="Chakra Army Training"
+            heading="Advanced Chakra Kriya Coach"
+            para="How Yogis Let Go Of Old Wounds & Clear Energy Blocks Using This Ancient 7-Step Process to Live A Life Of Abundant Joy & Limitless Creativity!."
+          />
+        </SwiperSlide>
+        <SwiperSlide className={styles.cardd}>
+          <CourseCard
+            imageName="course1.webp"
+            heading="Wealth (Third) Eye Secret Training"
+            para="Awaken your third eye and channel the divine energy of the universe to turn it into your wealth eye and attract abundance into your life effortlessly."
+          />
+        </SwiperSlide>
+        <SwiperSlide className={styles.cardd}>
+          <CourseCard
+            imageName="course7.jpg"
+            heading="Join Chakra Army "
             para="Discover how to awaken your chakras and become one with the universe."
           />
         </SwiperSlide>
         <SwiperSlide className={styles.cardd}>
           <CourseCard
             imageName="course5.webp"
-            heading="5 Hour Energy Consultation"
+            heading="Chakra Kriya Free Training"
             para="Experience the Himalayan knowledge and develop a personalized spiritual growth plan with Swami Dhiren live in a one-on-one setting."
-          />
-        </SwiperSlide>
-        <SwiperSlide className={styles.cardd}>
-          <CourseCard
-            imageName="course6.webp"
-            heading="Secrets of Vitality"
-            para="It’s common to train in diet & exercise, but almost no one trains their breath... this is a big miss out for health seekers!"
           />
         </SwiperSlide>
       </Swiper>

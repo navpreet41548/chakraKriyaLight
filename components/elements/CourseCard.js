@@ -17,7 +17,10 @@ const CourseCard = (props) => {
         <h1 className={styles.heading}>{props.heading}</h1>
         <p className={styles.para}>{props.para}</p>
       </div>
-      <Link href={"/"} className={styles.button}>
+      <Link
+        href={"https://learn.chakrakriya.org/optin1673274665842"}
+        className={styles.button}
+      >
         LEARN MORE
       </Link>
     </div>

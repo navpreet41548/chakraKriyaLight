@@ -112,12 +112,16 @@
   font-family: var(--heading-font);
   font-size: 30px;
   line-height: 25px;
+  background: linear-gradient(to right, var(--main-color1), var(--main-color2));
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .diff {
   font-size: 18px;
   font-family: var(--simple-font);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--font-color2);
 }
 

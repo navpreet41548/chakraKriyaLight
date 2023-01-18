@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "./Footer.module.css";
@@ -17,7 +18,14 @@ const Footer = () => {
       <div className={styles.footerTop}>
         <div className={styles.left}>
           <div className={styles.logoContainer}>
-            <div className={styles.logoImage}>L</div>
+            {/* <div className={styles.logoImage}>L</div> */}
+            <Image
+              className={styles.logoImage}
+              src={"/images/logo/logo.png"}
+              width={100}
+              height={100}
+              alt="Logo"
+            />
             <h1 className={styles.heading}>CHAKRA KRIYA</h1>
           </div>
           <p className={styles.para}>
