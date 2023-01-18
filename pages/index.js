@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Chakra Kriya</title>
         <meta name="description" content="Chakra Kriya" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
