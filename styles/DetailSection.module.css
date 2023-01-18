@@ -193,6 +193,10 @@
   }
   .mainHeading {
     font-size: 27px;
+    display: none;
+  }
+  .curve {
+    transform: scaleY(0.6) translateY(-20%);
   }
 }
 

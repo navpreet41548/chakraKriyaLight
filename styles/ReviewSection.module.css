@@ -1,11 +1,12 @@
 .container {
   position: relative;
   width: 100vw;
-  min-height: 50vh;
+  /* min-height: 50vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(-main-background-color);
+  padding: 100px 0;
 }
 
 .curve {
@@ -188,6 +189,10 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .container {
+    min-height: 300px;
+    padding: 0;
+  }
   .card {
     width: 85%;
     padding: 20px 15px;
@@ -206,6 +211,8 @@
 }
 
 @media screen and (max-width: 450px) {
+  .container {
+  }
   .card {
     padding: 15px 15px;
   }

@@ -165,7 +165,7 @@
 
 @media screen and (max-width: 500px) {
   .container {
-    padding: 100px 3%;
+    padding: 10px 3%;
   }
 }
 @media screen and (max-width: 450px) {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import MasterClassBlurBox from "../elements/MasterClassBlurBox";
 import styles from "/styles/DetailSection.module.css";
 
 const DetailSection = () => {

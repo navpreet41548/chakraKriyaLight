@@ -1,0 +1,229 @@
+.blurBox {
+  position: relative;
+  width: 60%;
+  height: 230px;
+  background-color: #ff8c496f;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.blurLine {
+  width: 50%;
+  height: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  filter: blur(2px);
+}
+
+.blurBoxTop .blurLine:nth-child(2) {
+  width: 70%;
+}
+.blurBoxBottom .blurLine:nth-child(1) {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.blurBoxTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.blurBoxBottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.paraContainer {
+  position: absolute;
+  left: 10%;
+  top: 105%;
+}
+
+.imagePara {
+  font-size: 12px;
+  border-bottom: 1px solid var(--main-color1);
+  color: var(--font-color2);
+  cursor: pointer;
+}
+
+/* .imagePara1 {
+  top: 105%;
+}
+.imagePara2 {
+  top: 115%;
+}
+.imagePara3 {
+  top: 120%;
+} */
+
+.line {
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  background-color: var(--main-color1);
+  top: 110%;
+  border-radius: 3px;
+  left: 10%;
+  /* display: none; */
+}
+
+.line1 {
+  top: 110%;
+}
+.line2 {
+  top: 115%;
+  width: 30%;
+}
+.line3 {
+  top: 120%;
+}
+
+.homePoster {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 4px 1px #a07eff93;
+}
+
+.homePoster1 {
+  left: -10%;
+  top: -25%;
+}
+.homePoster2 {
+  right: -15%;
+  bottom: -30%;
+}
+
+@media screen and (max-width: 1400px) {
+  .para {
+    letter-spacing: 2px;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 10px 0;
+  }
+
+  .blurBox {
+    width: 50%;
+    height: 150px;
+  }
+
+  .blurLine {
+    height: 5px;
+    margin-bottom: 10px;
+  }
+  .homePoster {
+    width: 54%;
+  }
+  .line {
+    height: 1px;
+  }
+  .paraContainer {
+    left: 0;
+  }
+  .imagePara {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .para {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .blurBox {
+    border-radius: 10px;
+    width: 50%;
+    height: 120px;
+    padding: 10px;
+  }
+  .homePoster {
+    border-radius: 7px;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .blurBox {
+    width: 100%;
+  }
+  .homePoster {
+    width: 40%;
+  }
+  .imagePara {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homePoster {
+    width: 50%;
+  }
+  .paraContainer {
+    left: 5%;
+  }
+  .imagePara {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blurBox {
+    width: 200px;
+    height: 100px;
+  }
+  .homePoster {
+    width: 34%;
+  }
+
+  .buttonContainer {
+    margin-top: 20px;
+  }
+
+  .paraContainer {
+    left: 10%;
+  }
+  .imagePara {
+    font-size: 10px;
+  }
+  .linkWrapper {
+    z-index: 10;
+  }
+  .link {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 0;
+    width: 80%;
+    white-space: nowrap;
+    display: block;
+    font-size: 13px;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--font-color2);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .blurBox {
+    width: 180px;
+    height: 80px;
+  }
+  .link {
+    font-size: 10px;
+  }
+}

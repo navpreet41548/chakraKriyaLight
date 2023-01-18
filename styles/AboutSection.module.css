@@ -313,6 +313,11 @@
     height: 100px;
   }
 }
+@media screen and (max-width: 600px) {
+  .backgroundImage {
+    width: 85%;
+  }
+}
 @media screen and (max-width: 500px) {
   /* .blob {
     width: 73%;

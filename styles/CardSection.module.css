@@ -2,7 +2,8 @@
   width: 100vw;
   position: relative;
   background-color: var(--main-background-color);
-  padding: 100px 8%;
+  padding: 0 8%;
+  padding-bottom: 70px;
 }
 
 .curve {
@@ -75,7 +76,7 @@
 
 @media screen and (max-width: 1150px) {
   .container {
-    padding: 100px 4%;
+    padding: 0 4%;
   }
   /* .card:nth-child(2) {
     margin: 0 15px;
@@ -87,7 +88,7 @@
     padding: 20px 50px !important;
   }
   .container {
-    padding: 100px 0;
+    padding: 0 0;
   }
   .blobGroup1 {
     top: 40%;
@@ -98,11 +99,19 @@
     width: 120px;
   }
 }
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0px 0;
+  }
+}
 @media screen and (max-width: 450px) {
   .swiperContainer {
-    padding: 20px 20px !important;
+    padding: 0px 20px !important;
   }
   .container {
-    padding: 50px 0;
+    padding: 0px 0;
+  }
+  .curve {
+    transform: scaleY(0.5) translateY(20%);
   }
 }

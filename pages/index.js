@@ -11,6 +11,7 @@ import CardSection from "../components/sections/CardSection";
 import CourseSection from "../components/sections/CourseSection";
 import DetailSection from "../components/sections/DetailSection";
 import Contact from "../components/sections/Contact";
+import MasterClassImage from "../components/sections/MasterClassImage";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <ReviewSection />
       <AboutMeSection />
       <CardSection />
+      <MasterClassImage />
       <DetailSection />
       <CourseSection />
       <Contact />

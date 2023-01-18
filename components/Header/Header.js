@@ -56,7 +56,15 @@ const Header = () => {
           src="/images/logo3.png"
           className={styles.logoImg}
         /> */}
-        <div className={styles.logoImg}></div>
+        {/* <div className={styles.logoImg}> */}
+        <Image
+          className={styles.logoImg}
+          src={"/images/logo/logo.png"}
+          width={100}
+          height={100}
+          alt="Logo"
+        />
+        {/* </div> */}
         <h2 className={styles.logoText}>CHAKRA KRIYA</h2>
       </div>
       <ul className={styles.center} ref={menuRef}>

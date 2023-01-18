@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  display: none;
+  /* height: 300px; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    /* height: 240px; */
+    display: flex;
+    padding: 40px 0;
+  }
+}
