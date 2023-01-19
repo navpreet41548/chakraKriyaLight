@@ -72,20 +72,32 @@ const MasterClassBlurBox = () => {
             </motion.p>
           </div> */}
       <motion.div
-        whileInView={{
-          opacity: 1,
-        }}
+        whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         transition={{
           duration: 0.3,
-          delay: 1,
+          delay: 0.5,
         }}
         className={styles.linkWrapper}
       >
-        <Link href="/" className={styles.link}>
-          BECOME A CERTIFIED <br /> COACH
+        <Link href="/" className={`${styles.link} ${styles.link1}`}>
+          Become A
         </Link>
       </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.7,
+        }}
+        className={styles.linkWrapper}
+      >
+        <Link href="/" className={`${styles.link} ${styles.link2}`}>
+          Certified Coach
+        </Link>
+      </motion.div>
+
       <motion.div
         whileInView={{ opacity: 1, transform: "translateX(0%) " }}
         initial={{ opacity: 0, transform: "translateX(-50%) " }}

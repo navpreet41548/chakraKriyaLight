@@ -103,7 +103,7 @@ const CourseSection = () => {
         <SwiperSlide className={styles.cardd}>
           <CourseCard
             imageName="course4.webp"
-            heading="Advanced Chakra Kriya Coach"
+            heading="Advanced Chakra Coach"
             para="How Yogis Let Go Of Old Wounds & Clear Energy Blocks Using This Ancient 7-Step Process to Live A Life Of Abundant Joy & Limitless Creativity!."
           />
         </SwiperSlide>

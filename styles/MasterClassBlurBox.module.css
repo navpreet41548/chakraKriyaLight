@@ -180,8 +180,8 @@
 
 @media screen and (max-width: 600px) {
   .blurBox {
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 130px;
   }
   .homePoster {
     width: 34%;
@@ -206,8 +206,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5px 0;
-    width: 80%;
+    padding: 3px;
     white-space: nowrap;
     display: block;
     font-size: 13px;
@@ -215,13 +214,24 @@
     text-align: center;
     border-radius: 5px;
     color: var(--font-color2);
+    border: 1px solid #bfa9ff;
+  }
+
+  .link1 {
+    transform: translate(-80%, -120%);
+  }
+  .link2 {
+    transform: translate(-35%, 10%);
+  }
+  .blurLine {
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 330px) {
   .blurBox {
-    width: 180px;
-    height: 80px;
+    width: 200px;
+    height: 100px;
   }
   .link {
     font-size: 10px;
