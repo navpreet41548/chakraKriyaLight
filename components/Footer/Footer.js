@@ -74,10 +74,16 @@ const Footer = () => {
         </div>
         <div className={styles.right}>
           <h1 className={styles.heading}>PRIVACY</h1>
-          <Link href={"/"} className={styles.link}>
+          <Link
+            href={"https://academy.chakrakriya.org/pages/terms"}
+            className={styles.link}
+          >
             TERMS OF USE
           </Link>
-          <Link href={"/"} className={styles.link}>
+          <Link
+            href={"https://academy.chakrakriya.org/pages/privacy-policy"}
+            className={styles.link}
+          >
             PRIVACY POLICY
           </Link>
         </div>

@@ -88,7 +88,7 @@ const CourseSection = () => {
       >
         <SwiperSlide className={styles.cardd}>
           <CourseCard
-            imageName="course2.webp"
+            imageName="course1.png"
             heading="Become a Certified Chakra Kriya Coach"
             para="To succeed as a coach now, you need to have something that sets you apart. The Chakra Kriya method is designed to help you awaken your unique gifts using ancient principles and help you become a coach who gets a flood of clients."
           />
@@ -102,21 +102,21 @@ const CourseSection = () => {
         </SwiperSlide>
         <SwiperSlide className={styles.cardd}>
           <CourseCard
-            imageName="course4.webp"
-            heading="Advanced Chakra Coach"
+            imageName="course1.webp"
+            heading="Advanced Chakra Course"
             para="How Yogis Let Go Of Old Wounds & Clear Energy Blocks Using This Ancient 7-Step Process to Live A Life Of Abundant Joy & Limitless Creativity!."
           />
         </SwiperSlide>
         <SwiperSlide className={styles.cardd}>
           <CourseCard
-            imageName="course1.webp"
+            imageName="wealthTraining.png"
             heading="Wealth (Third) Eye Secret Training"
             para="Awaken your third eye and channel the divine energy of the universe to turn it into your wealth eye and attract abundance into your life effortlessly."
           />
         </SwiperSlide>
         <SwiperSlide className={styles.cardd}>
           <CourseCard
-            imageName="course7.jpg"
+            imageName="joinChakraArmy.png"
             heading="Join Chakra Army "
             para="Discover how to awaken your chakras and become one with the universe."
           />

@@ -48,7 +48,7 @@
   padding: 50px 10px !important;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1399px) {
   .card0 {
     display: none;
   }
