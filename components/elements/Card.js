@@ -21,9 +21,14 @@ const Card = (props) => {
         </div>
         <p className={styles.para}>{props.para}</p>
       </div>
-      <Link className={styles.button} href="/">
+      <a
+        target="_blank"
+        className={styles.button}
+        href="https://learn.chakrakriya.org/order-550968551655853311404"
+        rel="noopener noreferrer"
+      >
         JOIN NOW
-      </Link>
+      </a>
     </div>
   );
 };
