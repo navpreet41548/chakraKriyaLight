@@ -68,9 +68,15 @@ const Footer = () => {
           <Link href={"/#aboutMe"} scroll={false} className={styles.link}>
             ABOUT SWAMI DHIREN
           </Link>
-          <Link href={"/"} scroll={false} className={styles.link}>
+          <a
+            target={"_blank"}
+            href="https://learn.chakrakriya.org/order-550968551655853311404"
+            rel="noopener noreferrer"
+            scroll={false}
+            className={styles.link}
+          >
             JOIN NOW
-          </Link>
+          </a>
         </div>
         <div className={styles.right}>
           <h1 className={styles.heading}>PRIVACY</h1>
@@ -90,6 +96,16 @@ const Footer = () => {
       </div>
       <div className={styles.footerBottom}>
         <p>Copyrights © 2023 All Rights Reserved by Chakra Kriya</p>
+        <p className={styles.credit}>
+          Created with ❤️ by{" "}
+          <a
+            target={"_blank"}
+            rel="noopener noreferrer"
+            href="https://navwebdev.vercel.app"
+          >
+            Navpreet Singh
+          </a>{" "}
+        </p>
       </div>
     </footer>
   );

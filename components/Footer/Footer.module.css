@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px 8%;
+  padding-bottom: 0;
   background-color: var(--main-color1);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.206);
 }
@@ -103,7 +104,7 @@
   border-top: 1px solid rgb(216, 216, 216);
   width: 100%;
   text-align: center;
-  padding-top: 20px;
+  padding: 5px;
 }
 
 .copied {
@@ -120,6 +121,10 @@
 .activeCopied {
   opacity: 1;
   transition: all 0.3s ease;
+}
+
+.credit a {
+  border-bottom: 1px solid white;
 }
 
 @media screen and (max-width: 1400px) {
@@ -145,6 +150,7 @@
 @media screen and (max-width: 1150px) {
   .footer {
     padding: 20px 4%;
+    padding-bottom: 10px;
   }
 }
 
