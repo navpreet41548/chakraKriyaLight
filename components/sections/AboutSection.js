@@ -73,12 +73,12 @@ const AboutSection = () => {
         </p>
 
         <motion.div
-          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          // transition={{
-          //   duration: 0.5,
-          //   delay: 0.2,
-          // }}
+          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+          }}
           className={styles.card}
           id="card1"
         >
@@ -90,12 +90,12 @@ const AboutSection = () => {
           </p>
         </motion.div>
         <motion.div
-          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          // transition={{
-          //   duration: 0.5,
-          //   delay: 0.4,
-          // }}
+          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          transition={{
+            duration: 0.5,
+            delay: 0.4,
+          }}
           className={styles.card}
           id="card2"
         >
@@ -110,12 +110,12 @@ const AboutSection = () => {
           </p>
         </motion.div>
         <motion.div
-          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          // transition={{
-          //   duration: 0.5,
-          //   delay: 0.6,
-          // }}
+          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          transition={{
+            duration: 0.5,
+            delay: 0.6,
+          }}
           className={styles.card}
           id="card3"
         >
