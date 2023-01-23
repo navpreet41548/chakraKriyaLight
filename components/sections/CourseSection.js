@@ -55,7 +55,7 @@ const CourseSection = () => {
           slideShadows: false,
         }}
         pagination={true}
-        // autoplay={true}
+        autoplay={true}
         modules={[EffectCoverflow, Pagination]}
         breakpoints={{
           300: {
