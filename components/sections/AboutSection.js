@@ -73,13 +73,14 @@ const AboutSection = () => {
         </p>
 
         <motion.div
-          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          transition={{
-            duration: 0.5,
-            delay: 0.2,
-          }}
+          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          // transition={{
+          //   duration: 0.5,
+          //   delay: 0.2,
+          // }}
           className={styles.card}
+          id="card1"
         >
           <h3 className={styles.cardHeading}>10,927+ lives transformed</h3>
           <p className={styles.cardPara}>
@@ -89,13 +90,14 @@ const AboutSection = () => {
           </p>
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4,
-          }}
+          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          // transition={{
+          //   duration: 0.5,
+          //   delay: 0.4,
+          // }}
           className={styles.card}
+          id="card2"
         >
           <h3 className={styles.cardHeading}>
             Support a soul while you heal yours!
@@ -108,13 +110,14 @@ const AboutSection = () => {
           </p>
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 1, transform: "translateX(0%) " }}
-          initial={{ opacity: 0, transform: "translateX(-50%) " }}
-          transition={{
-            duration: 0.5,
-            delay: 0.6,
-          }}
+          // whileInView={{ opacity: 1, transform: "translateX(0%) " }}
+          // initial={{ opacity: 0, transform: "translateX(-50%) " }}
+          // transition={{
+          //   duration: 0.5,
+          //   delay: 0.6,
+          // }}
           className={styles.card}
+          id="card3"
         >
           <h3 className={styles.cardHeading}>25+ years of experience</h3>
           <p className={styles.cardPara}>
