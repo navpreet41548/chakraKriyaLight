@@ -76,8 +76,8 @@ const ExpReviewSection = () => {
             <div className={styles.cardTop}>
               <div className={styles.cardImage}></div>
               <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
+                <h1 className={styles.heading}>JANE</h1>
+                <h3 className={styles.subHeading}>UNITED KINGDOM</h3>
               </div>
             </div>
             <div className={styles.starContainer}>
@@ -88,9 +88,72 @@ const ExpReviewSection = () => {
               <i className="bx bxs-star"></i>
             </div>
             <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
+              I enjoyed my experience with Chakra Kriya, it helped me reprogram
+              my subconscious mind&apos;s negative chatter with positive
+              programming. I am glad to have come across this framework.
+            </p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <div className={styles.cardTop}>
+              <div className={styles.cardImage}></div>
+              <div className={styles.detail}>
+                <h1 className={styles.heading}>JOHN</h1>
+                <h3 className={styles.subHeading}>FLORIDA</h3>
+              </div>
+            </div>
+            <div className={styles.starContainer}>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+            </div>
+            <p className={styles.para}>
+              What Swami Dhiren and the team at Chakra Kriya are doing for the
+              world is simply amazing, there are not too many people today who
+              render the services he and his team does.
+            </p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <div className={styles.cardTop}>
+              <div className={styles.cardImage}></div>
+              <div className={styles.detail}>
+                <h1 className={styles.heading}>DR. IND </h1>
+                <h3 className={styles.subHeading}>CANADA</h3>
+              </div>
+            </div>
+            <div className={styles.starContainer}>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+            </div>
+            <p className={styles.para}>
+              Started practicing the Chakra Kriya almost two years ago, and my
+              life has never been the same. I am happier than ever, healthier
+              than ever and more fulfilled than ever.
+            </p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <div className={styles.cardTop}>
+              <div className={styles.cardImage}></div>
+              <div className={styles.detail}>
+                <h1 className={styles.heading}>SARAH</h1>
+                <h3 className={styles.subHeading}>USA</h3>
+              </div>
+            </div>
+            <div className={styles.starContainer}>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+              <i className="bx bxs-star"></i>
+            </div>
+            <p className={styles.para}>
+              I highly recommend Chakra Kriya, the classes led by expert
+              instructors have been a game-changer for me, helping me find inner
+              peace and clarity.
             </p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
@@ -118,8 +181,8 @@ const ExpReviewSection = () => {
             <div className={styles.cardTop}>
               <div className={styles.cardImage}></div>
               <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
+                <h1 className={styles.heading}>JAKE</h1>
+                <h3 className={styles.subHeading}>AUSTRALIA</h3>
               </div>
             </div>
             <div className={styles.starContainer}>
@@ -130,17 +193,16 @@ const ExpReviewSection = () => {
               <i className="bx bxs-star"></i>
             </div>
             <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
+              The serene and peaceful environment, provided by expert
+              instructors, has allowed me to find inner peace and tranquility
             </p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
             <div className={styles.cardTop}>
               <div className={styles.cardImage}></div>
               <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
+                <h1 className={styles.heading}>DANIAL</h1>
+                <h3 className={styles.subHeading}>HUNGARY</h3>
               </div>
             </div>
             <div className={styles.starContainer}>
@@ -151,72 +213,10 @@ const ExpReviewSection = () => {
               <i className="bx bxs-star"></i>
             </div>
             <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className={styles.card}>
-            <div className={styles.cardTop}>
-              <div className={styles.cardImage}></div>
-              <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
-              </div>
-            </div>
-            <div className={styles.starContainer}>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-            </div>
-            <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className={styles.card}>
-            <div className={styles.cardTop}>
-              <div className={styles.cardImage}></div>
-              <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
-              </div>
-            </div>
-            <div className={styles.starContainer}>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-            </div>
-            <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className={styles.card}>
-            <div className={styles.cardTop}>
-              <div className={styles.cardImage}></div>
-              <div className={styles.detail}>
-                <h1 className={styles.heading}>RAJIV</h1>
-                <h3 className={styles.subHeading}>NEW YORK</h3>
-              </div>
-            </div>
-            <div className={styles.starContainer}>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-              <i className="bx bxs-star"></i>
-            </div>
-            <p className={styles.para}>
-              Truly one of the most amazing experiences I have ever had in my
-              years of practicing meditation. Went above and beyond what I
-              expected. Would definitely recommend
+              The expert instructors guide you through various breathing
+              techniques that have helped me to find inner peace and calm. I
+              highly recommend it to anyone looking for mental and physical
+              well-being.
             </p>
           </SwiperSlide>
         </div>
